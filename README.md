@@ -1,17 +1,17 @@
 # Scrext
 A Python tool for Windows, to quickly copy text you are unable to copy by yourself.
+Using [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki) for the text recogniction.
 
 ## Manual
 Simply run the application and press the big button at the bottom. Click and drag your mouse over the area you want to scan for text. The text is then shown in the box and automatically copied to your clipboard (can be disabled in the settings). 
 
 ### Auto Installation
 Just download and run one of the installers.
-Basic version ~500MB (Only English training data)
-Advanced version ~1000MB (Contains all availble language and script data)
+Basic version ~500MB (only English training data)
+Advanced version ~1000MB (all availble language and script data)
 
 ### Manual Installation
 - make sure Python is installed, or use the Python Installer in installations/
-- install [Tesseract OCR GitHub](https://github.com/UB-Mannheim/tesseract/wiki) or use the OCR Installer in installations/
 - run command: `pip install -r installations/requirements.txt`
 
 Run app.py to start the application.

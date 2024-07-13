@@ -2,3 +2,5 @@
 .venv/
 build/
 __pycache__
+Tesseract-OCR/
+Tesseract-OCR(advanced)/
