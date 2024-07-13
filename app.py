@@ -1,4 +1,5 @@
 import tkinter as tk
+from tools.getPath import get_resource_path
 from tools.readText import read_text
 
 
@@ -34,7 +35,8 @@ def always_on_top():
 
 root = tk.Tk()
 root.title("Scrext")
-root.iconbitmap('./images/kitty.ico')
+icon_path = get_resource_path('images/kitty.ico')
+root.iconbitmap(icon_path)
 root.geometry('300x200')
 # Settings--------------------------------------------------------------------------------------------------------------
 menubar = tk.Menu(root)
