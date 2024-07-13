@@ -9,7 +9,6 @@ InstallDir $PROGRAMFILES\Scrext
 !define MUI_ABORTWARNING
 
 !insertmacro MUI_PAGE_WELCOME
-;!insertmacro MUI_PAGE_LICENSE "license.txt"  ; Diese Zeile entfernen, wenn keine Lizenzseite benötigt wird
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 !insertmacro MUI_PAGE_FINISH
@@ -39,7 +38,7 @@ Section "MainSection" SEC01
 
     ; Installationsdateien kopieren
     SetOutPath $INSTDIR\installations
-    File "installations\python-3.12.3.exe"  ; Ersetzen Sie durch den tatsächlichen Dateinamen
+    File "installations\python-3.12.3.exe"  
     File "installations\requirements.txt"
 
     ; Python installieren (falls nicht vorhanden)
@@ -48,7 +47,7 @@ Section "MainSection" SEC01
         MessageBox MB_OK "Python ist bereits installiert."
         Goto done_python_install
     python_not_installed:
-        ExecWait '"$INSTDIR\installations\python-3.12.3.exe" /quiet InstallAllUsers=1 PrependPath=1'  ; Ersetzen Sie durch den tatsächlichen Dateinamen
+        ExecWait '"$INSTDIR\installations\python-3.12.3.exe" /quiet InstallAllUsers=1 PrependPath=1'  
     done_python_install:
 
     ; Pip-Anforderungen installieren
@@ -67,7 +66,7 @@ Section "Uninstall"
     Delete "$DESKTOP\Scrext.lnk"
     Delete "$INSTDIR\app.exe"
     Delete "$INSTDIR\installations\requirements.txt"
-    Delete "$INSTDIR\installations\python-3.12.3.exe"  ; Ersetzen Sie durch den tatsächlichen Dateinamen
+    Delete "$INSTDIR\installations\python-3.12.3.exe"
     Delete "$INSTDIR\images\kitty.ico"
     RMDir /r "$INSTDIR\OCR"
     RMDir "$INSTDIR\installations"
