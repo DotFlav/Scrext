@@ -8,8 +8,8 @@ Simply run the application and press the big button at the bottom. Click and dra
 
 ### Auto Installation
 Just download and run one of the installers.
--Basic version ~500MB (only English training data)
--Advanced version ~1000MB (all availble language and script data)
+- Basic version ~500MB (only English training data)
+- Advanced version ~1000MB (all availble language and script data)
 
 ### Manual Installation
 - make sure Python is installed, or use the Python Installer in installations/
